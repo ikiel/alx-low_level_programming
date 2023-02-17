@@ -18,7 +18,7 @@ putchar(a);
 }
 
 b = 97;
-while (b < 123)
+while (b < 103)
 {
 putchar(b);
 ++b;
