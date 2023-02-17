@@ -10,20 +10,23 @@ int main(void)
 int a;
 int b;
 
-a = 97;
-while (a < 123)
+for (a = 48; a < 58; a++)
+{
+for (b = 48; b < 58; a++)
+{
+if (b != a)
 {
 putchar(a);
-++a;
-}
-
-b = 65;
-while (b < 91)
-{
 putchar(b);
-++b;
 }
-
+else
+{
+continue;
+}
+putchar(',');
+putchar(' ');
+}
+}
 putchar('\n');
 
 return (0);
