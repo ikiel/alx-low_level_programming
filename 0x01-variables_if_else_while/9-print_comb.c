@@ -17,8 +17,8 @@ if (a != 57)
 {
 putchar(',');
 putchar(' ');
-++a;
 }
+++a;
 }
 
 putchar('\n');
