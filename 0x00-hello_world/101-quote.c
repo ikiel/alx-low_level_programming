@@ -1,14 +1,13 @@
+#include <stdio.h>
 #include <unistd.h>
-#include <sys/syscall.h>
 
 /**
- *main - Entry point
- *
- *Return: Always 0 (Success)
+ * main - Entry point
+ * Description: print a program to standard error
+ * Return: Always 1 (Success)
  */
-int main(void)
+int main (void)
 {
-const char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-syscall(SYS_write, 1, msg, sizeof(msg));
-return (0);
+write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+return (1);
 }
