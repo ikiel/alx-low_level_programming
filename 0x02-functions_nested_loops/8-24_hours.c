@@ -17,7 +17,11 @@ void jack_bauer(void)
 	{
 		for (h = '0'; h <= '9'; h++)
 		{
-			if (th < '2')
+			if (th == '2' && h >= '5')
+			{
+				break;
+			}
+			else
 			{
 				for (tm = '0'; tm <= '5'; tm++)
 				{
@@ -31,10 +35,6 @@ void jack_bauer(void)
 						_putchar ('\n');
 					}
 				}
-			}
-			else if (th == '2' && h == '4')
-			{
-				break;
 			}
 		}
 	}
