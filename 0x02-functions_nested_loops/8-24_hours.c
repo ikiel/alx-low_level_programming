@@ -19,11 +19,6 @@ void jack_bauer(void)
 		{
 			if (th == '2' && h == '4')
 			{
-				_putchar (th);
-				_putchar (h);
-				_putchar (':');
-				_putchar ('0');
-				_putchar ('0');
 				break;
 			}
 			else
