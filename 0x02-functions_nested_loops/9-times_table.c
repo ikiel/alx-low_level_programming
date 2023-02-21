@@ -27,5 +27,4 @@ void times_table(void)
 			}
 		}
 	}
-	return (0);
 }
