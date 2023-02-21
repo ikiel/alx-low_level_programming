@@ -6,7 +6,7 @@
  *Return: 1 if sign is +, 0 if n is zero and -1 if sign is -
  */
 
-int print_sign(int c)
+int print_sign(int n)
 {
 	if (n > 0)
 	{
@@ -21,6 +21,6 @@ int print_sign(int c)
 	else
 	{
 		_putchar('-');
-		return (0);
+		return (-1);
 	}
 }
