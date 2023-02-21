@@ -1,9 +1,19 @@
+#ifndef MAIN_H
+#define MAIN_H
+int _putchar(char c);
+
+/**
+ * print_alphabet - A function that prints the alphabet in lowercase
+ */
+
 void print_alphabet(void)
 {
 int i;
-for (i = 97; i <=122; i++)
+for (i = 97; i <= 122; i++)
 {
-putchar(i);
+_putchar(i);
 }
-putchar('\n');
+_putchar('\n');
 }
+
+#endif
