@@ -19,15 +19,14 @@ void times_table(void)
 			int result;
 
 			result = i * j;
-			printf("%d", result);
+			printf(" %d", result);
 			if (j == 9)
 			{
-				_putchar(',');
-				_putchar(' ');
+				_putchar('\n');
 			}
 			else
 			{
-				_putchar('\n');
+				_putchar(',');
 			}
 		}
 	}
