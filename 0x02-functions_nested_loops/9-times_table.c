@@ -21,11 +21,11 @@ void times_table(void)
 			result = i * j;
 			if (j == 9)
 			{
-				printf("%2d\n", result);
+				printf("%3d\n", result);
 			}
 			else
 			{
-				printf("%2d, ", result);
+				printf("%3d,", result);
 			}
 		}
 	}
