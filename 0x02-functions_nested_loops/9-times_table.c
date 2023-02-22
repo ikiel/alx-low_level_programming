@@ -18,6 +18,7 @@ void times_table(void)
 		{
 			int result;
 
+			result = i * j;
 			if (j == 9)
 			{
 				printf("%d\n", result);
