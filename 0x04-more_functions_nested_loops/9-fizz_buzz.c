@@ -26,16 +26,10 @@ int main(void)
 		}
 		else
 		{
-			if (i == 100)
-			{
-				printf("%d\n", i);
-			}
-			else
-			{
-			printf("%d ", i);
-			}
+		       print("%d ", i);
 		}
 	}
+	printf("\n");
 
 	return (0);
 }
