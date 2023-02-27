@@ -20,7 +20,7 @@ void puts2(char *str)
 
 	for (j = 0; j <= i; j += 2)
 	{
-		_putchar(s[j]);
+		_putchar(str[j]);
 	}
 
 	_putchar('\n');
