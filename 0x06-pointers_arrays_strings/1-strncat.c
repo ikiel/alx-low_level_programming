@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - copies string to buffer
+ * _strncat - concatenatenates two strigns delimited by n
  * @dest: destination string
  * @src: string to copy
  * @n: bytes to copy from src
@@ -11,13 +11,25 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	int i;
+	int j;
 
-	i = -1;
+	i = 0;
 
-	do {
+	while (dest[i] != '\0')
+	{
 		i++;
-		dest[i] = src[i];
-	} while (src[i] != '\0');
+	}
+
+	j = 0;
+
+	while (j < n && src[j] != 0)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+
+	dest[i] = '\0';
 
 	return (dest);
 }
