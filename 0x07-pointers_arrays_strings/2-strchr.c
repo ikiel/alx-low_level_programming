@@ -23,11 +23,9 @@ char *_strchr(char *s, char c)
 	{
 		if (s[j] == c)
 		{
-			return (s);
-		}
-		else
-		{
-			return (0);
+			return ((s+j));
 		}
 	}
+
+	return ('\0');
 }
