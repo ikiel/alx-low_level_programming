@@ -24,7 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 		count++;
 	}
 
-	while (s[i] != '\0')
+	while (s[i] != ' ')
 	{
 		for (j = 0; j < count; j++)
 		{
@@ -33,6 +33,8 @@ unsigned int _strspn(char *s, char *accept)
 				n++;
 			}
 		}
+
+		i++;
 	}
 
 	return (n);
