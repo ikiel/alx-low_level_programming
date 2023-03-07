@@ -1,13 +1,5 @@
 #include "main.h"
 
-/**
- * real_sqrt - recurses to find natural square root of a number
- * @n: the number
- * @i: iterator
- *
- * Return: the resulting square root
- */
-
 int real_sqrt(int n, int i);
 
 /**
@@ -25,6 +17,14 @@ int _sqrt_recursion(int n)
 	else
 		return (real_sqrt(n, 0));
 }
+
+/**
+ * real_sqrt - recurses to find natural square root of a number
+ * @n: the number
+ * @i: iterator
+ *
+ * Return: the resulting square root
+ */
 
 int real_sqrt(int n, int i)
 {
