@@ -13,6 +13,11 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
+		printf("Error\n");
+		return(1);
+	}
+	else
+	{
 		int i;
 		int j;
 
@@ -22,11 +27,5 @@ int main(int argc, char *argv[])
 		printf("%d\n", i * j);
 
 		return (0);
-	}
-	else
-	{
-		printf("Error\n");
-
-		return (1);
 	}
 }
