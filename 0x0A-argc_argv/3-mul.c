@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - multiply two numbers
@@ -13,9 +14,12 @@ int main(int argc, char *argv[])
 	if (argc > 1)
 	{
 		int i;
+		int j;
 
-		i = argv[1] * argv[2];
-		printf("%d\n", i);
+		i = atoi(argv[1]);
+		j = atoi(argv[2]);
+
+		printf("%d\n", i * j);
 
 		return (0);
 	}
