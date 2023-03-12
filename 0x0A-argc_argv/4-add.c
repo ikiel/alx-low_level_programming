@@ -11,34 +11,31 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc > 1)
-	{
-		int i;
-		int n;
-		int sum;
-		char *flag;
+	int i;
+	long n;
+	long sum;
+	char *flag;
 
-		for (i = 1; argv[i] < argv[argc]; i++)
-		{
-			n = strtol(argv[i], &flag, 10);
-			if (*flag)
-			{
-				printf("Error\n");
-				return (1);
-			}
-			else
-			{
-				sum += n;
-			}
-		}
-
-		printf("%d\n", sum);
-		return (0);
-	}
-	else
+	if (argc < 2)
 	{
 		printf("0\n");
-
 		return (0);
 	}
+
+	for (i = 1; argv[i]; i++)
+	{
+		n = strtol(argv[i], &flag, 10);
+		if (*flag)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+		{
+			sum += n;
+		}
+	}
+
+	printf("%ld\n", sum);
+	return (0);
 }
