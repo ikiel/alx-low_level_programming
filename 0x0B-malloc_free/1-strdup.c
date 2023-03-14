@@ -12,13 +12,13 @@ char *_strdup(char *str)
 {
 	char *new;
 	unsigned int i;
-	int j;
+	unsigned int j;
 
 	if (str == NULL)
 		return NULL;
 
 	i = 0;
-	while (str[j] != '\0')
+	while (str[i] != '\0')
 		i++;
 	i++;
 
