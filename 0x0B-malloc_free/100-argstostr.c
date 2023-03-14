@@ -9,24 +9,19 @@
  * Return: pointer to concatenated string
  */
 
-char *argstostr(int ac, char**av)
+char *argstostr(int ac, char **av)
 {
 	char *str;
 	char *s;
-	int j;
-	int i;
-	int k;
-	int len;
+	int j, i, k. len;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-
 	len = 0;
 	for (i = 0; i < ac; i++)
 	{
 		s = av[i];
 		j = 0;
-
 		while (s[j++])
 			len++;
 		len++;
@@ -40,7 +35,6 @@ char *argstostr(int ac, char**av)
 	{
 		s = av[i];
 		k = 0;
-
 		while (s[k])
 		{
 			str[j] = s[k];
@@ -50,6 +44,5 @@ char *argstostr(int ac, char**av)
 		str[j++] = '\n';
 	}
 	str[j] = '\0';
-
 	return (str);
 }
