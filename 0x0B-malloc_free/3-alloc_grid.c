@@ -11,7 +11,7 @@
 
 int **alloc_grid(int width, int height)
 {
-	int *grid;
+	int *grid[width][height];
 	unsigned int k;
 	int j;
 	int i;
