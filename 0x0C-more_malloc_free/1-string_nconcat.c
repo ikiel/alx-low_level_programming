@@ -40,13 +40,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		string[j] = s1[j];
 		j++;
 	}
-	while (j < count)
+	while (i < n)
 	{
 		string[j] = s2[i];
 		j++;
 		i++;
 	}
-	string[j] = '\0';
+	string[count] = '\0';
 
 	return (string);
 }
