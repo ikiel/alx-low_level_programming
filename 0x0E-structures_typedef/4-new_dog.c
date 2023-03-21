@@ -1,41 +1,47 @@
-#include "dog.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include "dog.h"
 
 /**
- * new_dog - creates a new struct dog
+ * new_dog - creates a new dog
  * @name: name of dog
- * @age: dog's age
- * @owner: dog owner's name
+ * @age: age of dog
+ * @owner: owner of dog
  *
- * Return: Struct dog
+ * Return: pointer to new dog
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *woof;
-
-	char *name_copy __attribute__((unused));
-	char *owner_copy __attribute__((unused));
+	unsigned int nl, ol, i;
+	dog_t *dog;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
-	woof = malloc(sizeof(dog_t));
-	if (woof == NULL)
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
 		return (NULL);
-	woof->name = malloc(sizeof((char *)name));
-	if (woof->name == NULL)
+	for (nl = 0; name[nl]; nl++)
+		;
+	nl++;
+	dog->name = malloc(nl * sizeof(char));
+	if (dog->name == NULL)
 	{
-		free(woof);
+		free(dog);
 		return (NULL);
 	}
-	woof->age = age;
-	woof->owner = malloc(sizeof((char *)owner));
-	if (woof->owner == NULL)
+	for (i = 0; i < nl; i++)
+		dog->name[i] = name[i];
+	dog->age = age;
+	for (ol = 0; owner[ol]; ol++)
+		;
+	ol++;
+	dog->owner = malloc(ol * sizeof(char));
+	if (dog->owner == NULL)
 	{
-		free(woof);
+		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
-
-	return (woof);
+	for (i = 0; i < ol; i++)
+		dog->owner[i] = owner[i];
+	return (dog);
 }
