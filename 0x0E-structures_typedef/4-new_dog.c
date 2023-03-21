@@ -14,17 +14,28 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *woof;
+
 	char *name_copy __attribute__((unused));
 	char *owner_copy __attribute__((unused));
 
+	if (name == NULL || owner == NULL)
+		return (NULL);
 	woof = malloc(sizeof(dog_t));
 	if (woof == NULL)
 		return (NULL);
-	name_copy = name;
-	owner_copy = owner;
-	woof->name = name;
+	woof->name = malloc(sizeof((char *)name));
+	if (woof->name == NULL)
+	{
+		free(woof);
+		return (NULL);
+	}
 	woof->age = age;
-	woof->owner = owner;
+	woof->owner = malloc(sizeof((char *)owner));
+	if (woof->owner == NULL)
+	{
+		free(woof);
+		return (NULL);
+	}
 
 	return (woof);
 }
