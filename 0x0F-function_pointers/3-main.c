@@ -10,8 +10,7 @@
 
 int main(int argc, char **argv)
 {
-	int a, b;
-	int (*result)(int, int);
+	int a, b, result;
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -32,8 +31,8 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 
-	result = get_op_func(argv[2]);
-	printf("%d\n", result(a, b));
+	result = get_op_func(argv[2])(a, b);
+	printf("%d\n", result);
 
 	return (0);
 }
