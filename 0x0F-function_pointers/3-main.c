@@ -10,7 +10,8 @@
 
 int main(int argc, char **argv)
 {
-	int a, b, (*result)(int, int);
+	int a, b;
+	int result;
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
@@ -21,8 +22,7 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	result = get_op_func(argv[2]);
-	if (!result)
+	if (!get_op_func(argv[2]))
 	{
 		printf("Error\n");
 		exit(99);
