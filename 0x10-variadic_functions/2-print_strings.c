@@ -4,14 +4,14 @@
 #include <stdarg.h>
 
 /**
- * print_numbers - prints numbers
+ * print_strings - prints strings
  * @separator: string between numbers
- * @n: number of numbers
+ * @n: number of strings
  *
  * Return: Nothing
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list ap;
@@ -21,7 +21,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		va_start(ap, n);
 		for (i = 0; i < n; i++)
 		{
-			printf("%d", va_arg(ap, int));
+			if (va_arg(ap, char*) == NULL)
+				printf("nill");
+			elif (va_arg(ap, char*) != NULL)
+				printf("%s", va_arg(ap, int));
 			if (i != (n - 1))
 				printf("%s", separator);
 		}
