@@ -15,6 +15,7 @@ size_t print_list(const list_t *h)
 	if (h == NULL)
 	{
 		printf("This list is an empty list");
+		exit(98);
 	}
 	ptr = h;
 
