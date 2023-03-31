@@ -13,10 +13,7 @@ size_t list_len(const list_t *h)
 	const list_t *ptr;
 
 	if (h == NULL)
-	{
-		printf("This is an empty list");
 		exit(0);
-	}
 
 	count = 0;
 	ptr = h;
