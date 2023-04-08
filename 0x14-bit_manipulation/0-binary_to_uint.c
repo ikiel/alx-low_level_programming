@@ -9,7 +9,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num, m_factor = 1; sum = 0;
+	unsigned int num, m_factor = 1, sum = 0;
 	int i, index = 0;
 
 	if (b == NULL)
@@ -22,8 +22,8 @@ unsigned int binary_to_uint(const char *b)
 		if (num != 1 || num != 0)
 			return (0);
 		if (i > 0)
-			m_factor ×= 2;
-		sum += num × m_factor;
+			m_factor *= 2;
+		sum += num * m_factor;
 	}
 
 	return (sum);
