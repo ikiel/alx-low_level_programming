@@ -14,11 +14,11 @@ void print_binary(unsigned long int n)
 	if (n == NULL)
 		return;
 	/* check the number of bits in the integer */
-	bits = sizeof(num) * 8;
+	bits = sizeof(n) * 8;
 	for (i = bits - 1; i >= 0; i--)
 	{
 		mask = 1 << i;
-		_putchar ((num & mask) ? '1' : '0');
+		_putchar ((n & mask) ? '1' : '0');
 	}
 	_putchar('\n');
 }
