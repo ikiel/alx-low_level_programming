@@ -9,16 +9,20 @@
 
 void print_binary(unsigned long int n)
 {
-	int mask, bits, i = 0;
+	int mask, bits, i;
 
 	if (n == NULL)
 		return;
 	/* check the number of bits in the integer */
 	bits = sizeof(n) * 8;
+
 	for (i = bits - 1; i >= 0; i--)
 	{
 		mask = 1 << i;
-		_putchar ((n & mask) ? '1' : '0');
+		if ((n & mask) == '1')
+			_putchar('1');
+		else if ((n & mask) == '0')
+			_putchar('0');
 	}
 	_putchar('\n');
 }
