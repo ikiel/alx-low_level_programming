@@ -9,21 +9,16 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num, m_factor = 1, sum = 0;
-	int i, index = 0;
+	unsigned int sum = 0;
+	int i, length;
 
-	if (b == NULL)
-		return (0);
-	while (b[index] != '\0')
-		index++;
-	for (i = 0; i < index; i++)
+	for (length = 0; b[length] != '\0'; length++)
+		;
+
+	for (i = 0; i < length; i++)
 	{
-		num = atoi(b[i]);
-		if (num != 1 || num != 0)
-			return (0);
-		if (i > 0)
-			m_factor *= 2;
-		sum += num * m_factor;
+		if (b[i] == '1')
+			sum += 1 << (length - 1 - i);
 	}
 
 	return (sum);
