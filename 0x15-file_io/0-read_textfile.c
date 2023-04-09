@@ -9,38 +9,31 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	unsigned int printed;
+	unsigned int printed = 0;
+	int c;
 	FILE *fp;
-	char buffer[];
+	char *buffer;
 
+	buffer = malloc(letters + 1);
+	if (buffer == NULL)
+		return (0);
 	if (filename == NULL)
 		return (0);
 	fp = fopen(filename, "r");
 	if (fp == NULL)
 		return (0);
-	while (fgets(buffer, letters + 1, fp) != NULL)
-		_puts(buffer);
+	while ((c = getc(fp)) != EOF)
+	{
+		_putchar(c);
+		printed++;
+		if (printed == letters)
+			break;
+	}
+
 	fclose(fp);
-	printed = sizeof(buffer);
+
+	free(buffer);
 	if (printed > letters)
 		return (0);
 	return (printed);
-}
-
-/**
- * _puts - prints a string
- * @str: the string to print
- *
- * return: null
- */
-void _puts(char *str)
-{
-	int i = 0;
-
-	while (str[i] != '\0')
-	{
-		_putchar(s[i]);
-		i++;
-	}
-	_putchar('\n');
 }
