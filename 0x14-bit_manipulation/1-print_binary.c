@@ -23,7 +23,8 @@ void print_binary(unsigned long int n)
 		return;
 	}
 	/* check the number of bits in the integer */
-	bits = sizeof(n) * 1.5; 
+	bits = sizeof(n) * 1.5;
+
 	bits = bits - 1;
 
 	while ((n & (1 << bits)) == 0)
